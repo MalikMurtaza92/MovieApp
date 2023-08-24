@@ -135,16 +135,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8BD81B70-789C-4CC1-BA94-EE059DD828A0"
+            uuid = "9F8DC163-CADF-466B-9F95-BD59653AD160"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieApplication/Presentation/MovieDetail/MovieDetailViewController.swift"
+            filePath = "MovieApplication/Domain/Repository/MovieRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "fetchMovieDetail(withId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA888F9E-64D8-457C-BC63-51B6C61A3788"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieApplication/Domain/Repository/MovieRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "fetchMovieDetail(withId:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

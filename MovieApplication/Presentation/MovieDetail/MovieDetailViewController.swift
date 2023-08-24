@@ -41,11 +41,13 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func onApiResponse(error: String? = nil){
-        isLoaderVisible(visibility: false)
         if let error{
-            showAlert(with: error, title: "Alert")
+            showAlert(with: error, title: "Alert",onOkTapped: {
+                self.navigationController?.popViewController(animated: true)
+            })
         }else{
-                self.setupMovieDetails()
+            isLoaderVisible(visibility: false)
+            self.setupMovieDetails()
         }
     }
     

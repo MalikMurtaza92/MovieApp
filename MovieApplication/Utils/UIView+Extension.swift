@@ -10,9 +10,9 @@ import Network
 
 extension UIViewController{
     
-    func showAlert(with message: String, title: String){
+    func showAlert(with message: String, title: String,onOkTapped: (() -> Void)? = nil){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in  onOkTapped?() }))
         self.present(alert, animated: true, completion: nil)
     }
     

@@ -12,7 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     lazy var movieRepository: MovieRepository = {
-        let session = URLSession(configuration: .default)
+        var session = URLSession(configuration: .default)
+        session.configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         let httpClient = UPURLSessionHttpClient(session: session)
         let movieRepository = HTTPMovieRepository(httpClient: httpClient)
         return movieRepository

@@ -62,6 +62,11 @@ final class HTTPMovieRepository: MovieRepository{
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("Bearer " + apiReadAccessToken, forHTTPHeaderField: "Authorization")
         
+        urlRequest.cachePolicy = .reloadIgnoringLocalCacheData
+        if !NetworkMonitor.shared.isReachable{
+            urlRequest.cachePolicy = .returnCacheDataDontLoad
+        }
+        
         httpClient.execute(urlRequest: urlRequest) { result in
             switch result{
             case .success(let (data,urlResponse)):
